@@ -27,7 +27,7 @@ pipeline {
         //use your code stage pipeline
         stage('develop'){
             steps{
-                sh "echo write your code pipeline"
+                sh "echo write your code"
             }
         }
     }
