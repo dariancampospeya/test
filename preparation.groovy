@@ -24,12 +24,20 @@ pipeline {
                         sh "echo My year is $edad"  
             }
         }
+
         //use your code stage pipeline
         stage('develop'){
             steps{
                 sh "echo write your code"
             }
         }
+    }
+
+    node {
+        git url: 'https://github.com/jglick/simple-maven-project-with-tests.git'
+        def mvnHome = tool 'M3'
+        env.PATH = "${mvnHome}/bin:${env.PATH}"
+        sh 'mvn -B verify'
     }
 
 }
