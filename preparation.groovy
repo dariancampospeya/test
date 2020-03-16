@@ -33,11 +33,8 @@ pipeline {
         }
     }
 
-    node {
-        git url: 'https://github.com/jglick/simple-maven-project-with-tests.git'
-        def mvnHome = tool 'M3'
-        env.PATH = "${mvnHome}/bin:${env.PATH}"
-        sh 'mvn -B verify'
+    node ('remote'){
+        git url: 'https://github.com/dariancampospeya/test.git'
     }
 
 }
