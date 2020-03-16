@@ -33,8 +33,10 @@ pipeline {
         }
     }
 
-    node ('remote'){
-        git url: 'https://github.com/dariancampospeya/test.git'
+    node {
+        stage('Clone sources') {
+            git url: 'https://github.com/jfrogdev/project-examples.git'
+        }
     }
 
 }
