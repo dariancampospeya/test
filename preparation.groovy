@@ -31,11 +31,6 @@ pipeline {
                 sh "echo write your code"
             }
         }
-
-        stage('Clone sources') {
-            git url: 'https://github.com/jfrogdev/project-examples.git'
-        }
-
     }
 
 }
