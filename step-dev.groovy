@@ -1,5 +1,7 @@
-
-class Utils{
-    def save(something){...}
+def stepsDev() {
+  	steps{
+        sh "echo write your code dev"
+    }
 }
 
+return this

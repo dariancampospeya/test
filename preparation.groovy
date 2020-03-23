@@ -1,3 +1,5 @@
+def code
+
 pipeline {
     agent { label "master"}
    
@@ -5,11 +7,6 @@ pipeline {
     environment {
        GITHUBREPO = ''
     }
-
-    import Utils
-    def dbUtils = new Utils()
-    def something = 'foobar'
-    dbUtils.save(something)
 
     stages {
         //inject stage code
@@ -38,8 +35,10 @@ pipeline {
     
                 sh "ls -lat"
                 sh "pwd"
-
             }
+            code = load 'step-dev.groovy'
+            code.stepsDev()
+
         }
     }
 
