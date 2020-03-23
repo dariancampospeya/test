@@ -1,1 +1,3 @@
-echo *********** Good Work *************
+step{
+	sh "echo *********** Good Work *************"
+}

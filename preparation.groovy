@@ -38,9 +38,11 @@ pipeline {
                     url: 'https://github.com/dariancampospeya/test.git'
     
                 sh "ls -lat"
-                sh "read step-dev"
-                sh "echo $step-dev"
+
             }
+            
+            {% include './step-dev' with context %}
+
         }
     }
 
