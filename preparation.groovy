@@ -31,6 +31,15 @@ pipeline {
                 sh "echo write your code"
             }
         }
+
+        stage('Checkout external proj') {
+            steps {
+                git branch: 'master',
+                    url: 'https://github.com/dariancampospeya/test.git'
+    
+                sh "ls -lat"
+            }
+        }
     }
 
 }
