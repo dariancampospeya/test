@@ -25,13 +25,6 @@ pipeline {
             }
         }
 
-        //use your code stage pipeline
-        stage('develop'){
-            steps{
-                sh "echo write your code"
-            }
-        }
-
         stage('Checkout external proj') {
             steps {
                 git branch: 'master',
