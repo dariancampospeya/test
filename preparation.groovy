@@ -35,10 +35,9 @@ pipeline {
     
                 sh "ls -lat"
                 sh "pwd"
+                code = load 'step-dev.groovy'
+                code.stepsDev()
             }
-            code = load 'step-dev.groovy'
-            code.stepsDev()
-
         }
     }
 
