@@ -25,7 +25,7 @@ pipeline {
             }
         }
 
-        {% include './step-dev.groovy' with context %}
+        evaluate(new File("step-dev.groovy"))
 
 
         stage('Checkout external proj') {
