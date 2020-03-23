@@ -1,5 +1,5 @@
-        stage('develop'){
-            steps{
-                sh "echo write your code"
-            }
-        }
+
+class Utils{
+    def save(something){...}
+}
+

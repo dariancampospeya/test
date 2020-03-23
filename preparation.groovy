@@ -6,7 +6,10 @@ pipeline {
        GITHUBREPO = ''
     }
 
-    evaluate(new File("step-dev.groovy"))
+    import Utils
+    def dbUtils = new Utils()
+    def something = 'foobar'
+    dbUtils.save(something)
 
     stages {
         //inject stage code
