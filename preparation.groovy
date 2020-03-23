@@ -40,8 +40,9 @@ pipeline {
                 sh "ls -lat"
 
             }
-            
-            {% include './step-dev' with context %}
+            File sourceFile = new File("./step-dev.groovy");
+            Class groovyClass = new GroovyClassLoader(getClass().getClassLoader()).parseClass(sourceFile);
+            GroovyObject myObject = (GroovyObject) groovyClass.newInstance()
 
         }
     }
