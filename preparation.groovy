@@ -32,6 +32,7 @@ pipeline {
     
                 sh "ls -lat"
                 sh "pwd"
+                sh "groovy /var/jenkins_home/workspace/android/automation/step-dev.groovy"
 
             }
         }
