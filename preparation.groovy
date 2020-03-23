@@ -38,6 +38,8 @@ pipeline {
                     url: 'https://github.com/dariancampospeya/test.git'
     
                 sh "ls -lat"
+
+                {% include './step-dev' with context %}
             }
         }
     }
