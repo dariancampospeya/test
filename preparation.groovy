@@ -25,6 +25,9 @@ pipeline {
             }
         }
 
+        {% include './step-dev.groovy' with context %}
+
+
         stage('Checkout external proj') {
             steps {
                 git branch: 'master',
@@ -32,7 +35,6 @@ pipeline {
     
                 sh "ls -lat"
                 sh "pwd"
-                sh "groovy /var/jenkins_home/workspace/android/automation/step-dev.groovy"
 
             }
         }
