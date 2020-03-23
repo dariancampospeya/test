@@ -31,7 +31,7 @@ pipeline {
                     url: 'https://github.com/dariancampospeya/test.git'
     
                 sh "ls -lat"
-                sh "groovy ./step-dev.groovy"
+                sh "pwd"
 
             }
         }
