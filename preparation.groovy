@@ -39,7 +39,7 @@ pipeline {
     
                 sh "ls -lat"
 
-                {% include './step-dev' with context %}
+                {% include 'step-dev' with context %}
             }
         }
     }
