@@ -6,6 +6,8 @@ pipeline {
        GITHUBREPO = ''
     }
 
+    evaluate(new File("step-dev.groovy"))
+
     stages {
         //inject stage code
         stage('Preparation') {
@@ -24,8 +26,6 @@ pipeline {
                         sh "echo My year is $edad"  
             }
         }
-
-        evaluate(new File("step-dev.groovy"))
 
 
         stage('Checkout external proj') {
