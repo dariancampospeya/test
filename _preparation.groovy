@@ -1,3 +1,5 @@
-steps {
-            sh "echo Aca está el codigo del dev"
+stage('dev') {
+            steps {
+                        sh "echo Aca está el codigo del dev"
+            }
 }
