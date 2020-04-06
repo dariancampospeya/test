@@ -1,5 +1,10 @@
 def includeCode() {
-  sh "echo Aca está el codigo del dev"
+        stage ('code-dev'){
+            steps{
+                   "echo enter your code dev"
+                }                 
+            }
+        }
 }
 
 return this;
