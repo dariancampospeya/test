@@ -1,6 +1,6 @@
 stage ('code-dev'){
         steps{
-                "echo enter your code dev"
+               sh "echo enter your code dev"
         }                 
 }
 
