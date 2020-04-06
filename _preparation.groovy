@@ -1,5 +1,5 @@
-stage('code-dev') {
-            steps {
-                    sh "echo enter your code dev"  
-            }
-        }
+node {
+    stage('code-dev') {
+        sh 'echo enter your code dev'
+    }
+}
